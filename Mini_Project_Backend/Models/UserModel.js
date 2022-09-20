@@ -1,0 +1,44 @@
+// const mongoose=require('mongoose')
+// mongoose.connect("mongodb+srv://aritry123:AritryMongo10@cluster0.h0xjooq.mongodb.net/?retryWrites=true&w=majority").then((res)=>console.log("Connected to db!")).catch((e)=>console.log("Error in connection: ",e))
+const userModel=mongoose.model("NewUserCollection",{
+    uname:{
+        type:String
+    },
+    password:{
+        type:String
+    },
+    email:{
+        type:String
+    },
+    fname:{
+        type:String
+    },
+    city:{
+        type:String
+    },
+    country:{
+        type:String
+    },
+    role:{
+        type:String
+    },
+    courses:{
+        type:Array
+    },
+    grades:{
+        type:Array
+    },
+    otpCode:{
+        type:Number
+    },
+    expireOtpIn:{
+        type:Number
+    },
+    secretCode:{
+        type:String
+    },
+    favourite:{
+        type:Array
+    }
+})
+module.exports=userModel
